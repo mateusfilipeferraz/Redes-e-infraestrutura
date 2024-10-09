@@ -1,3 +1,5 @@
+Link download do laboratório
+
 # Configuração de Link Failover no MikroTik
 
 O **Failover de link** é uma funcionalidade essencial em redes para garantir que, em caso de falha do link principal, o tráfego seja redirecionado automaticamente para um link de backup. No MikroTik, o Failover pode ser implementado de forma simples ou avançada, dependendo das necessidades da rede.
