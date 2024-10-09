@@ -5,6 +5,8 @@ Bem-vindo ao meu repositório de estudos sobre infraestrutura e redes! Sou anali
 ## O que você vai encontrar aqui:
 
 - **Laboratórios**: Ambientes simulados de redes com roteadores, switches, Mikrotik e outras tecnologias.
+ (nossos laboratórios rodam no gns3, vou tentar usar sempre o host padrão para não haver imcompatibilidades)
+Link GNS3 => https://gns3.com/
 - **Zabbix**: Configurações e scripts relacionados ao monitoramento de rede usando Zabbix.
 - **Segurança de Redes**: IDS/IPS e outras ferramentas de proteção de rede.
 - **Automação e Scripts**: Scripts para automação de tarefas em redes e infraestrutura.
