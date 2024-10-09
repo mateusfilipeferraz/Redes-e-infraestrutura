@@ -1,3 +1,6 @@
+
+![Minha imagem](imagens/Link fairlover.png)
+
 Link download do laboratório => https://drive.google.com/file/d/1gt_O3p0Ky5laeuP_ONNJjR8vlHHHDxKR/view?usp=drive_link
 
 # Configuração de Link Failover no MikroTik
