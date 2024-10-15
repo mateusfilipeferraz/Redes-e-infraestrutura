@@ -1,4 +1,8 @@
+# Imagem do Zabbix Server com VMWare
 Zabbix é uma solução de monitoramento **open-source** e altamente escalável, utilizada para supervisionar redes, servidores, aplicações, serviços em nuvem e dispositivos IoT. Ele oferece monitoramento baseado em agentes ou sem agente, coletando métricas como uso de CPU, memória, tráfego de rede, entre outros. O Zabbix pode emitir alertas via e-mail, SMS, e outros canais quando determinadas condições são atingidas, além de fornecer gráficos e dashboards customizáveis para visualização de dados históricos e em tempo real.
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Zabbix%20serve%20no%20VMWare/Screenshot_1.png)
+
 
 ### Funcionalidades principais:
 
