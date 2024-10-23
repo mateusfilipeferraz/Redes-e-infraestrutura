@@ -3,6 +3,7 @@
 O **WinMTR** (Windows MultiThreaded Traceroute) é uma ferramenta que combina as funções de traceroute e ping para diagnosticar problemas de rede. É útil para administradores de rede e profissionais de TI, permitindo monitorar a qualidade da conexão com um host.
 
 Link download WinMtr: https://sourceforge.net/projects/winmtr/
+
 Link site com mais conteúdo:https://blog.ferenz.com.br/utilizando-o-winmtr-no-windows/
 
 ## Principais Recursos do WinMTR
