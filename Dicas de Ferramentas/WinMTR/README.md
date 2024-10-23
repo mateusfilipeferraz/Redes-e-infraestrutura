@@ -6,6 +6,9 @@ Link download WinMtr: https://sourceforge.net/projects/winmtr/
 
 Link site com mais conteúdo:https://blog.ferenz.com.br/utilizando-o-winmtr-no-windows/
 
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dicas%20de%20Ferramentas/WinMTR/mtr.png)
+
+
 ## Principais Recursos do WinMTR
 
 1. **Traceroute**: 
