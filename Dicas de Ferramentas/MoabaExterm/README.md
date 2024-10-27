@@ -1,10 +1,9 @@
-Aqui está o conteúdo sobre o **MobaXterm** em Markdown:
-
-```markdown
 # MobaXterm
 
 O **MobaXterm** é uma ferramenta poderosa e completa para acesso remoto e gerenciamento de servidores e redes, especialmente projetada para usuários que precisam de múltiplos serviços em um único software. Ele combina várias funcionalidades de cliente, como SSH, telnet, VNC, SFTP e RDP, em uma interface gráfica amigável para sistemas Windows. É amplamente utilizado por administradores de sistemas, engenheiros de rede e desenvolvedores, pois facilita a execução de tarefas remotas e o gerenciamento de servidores e equipamentos de rede.
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dicas%20de%20Ferramentas/MoabaExterm/MobaXterm.png)
 
+Link site oficial-> https://mobaxterm.mobatek.net/
 ## Principais Funcionalidades do MobaXterm
 
 1. **Cliente SSH e Suporte para Múltiplos Protocolos**:
@@ -58,6 +57,3 @@ O **MobaXterm** é uma ferramenta poderosa e completa para acesso remoto e geren
 ## Conclusão
 
 O MobaXterm é uma solução completa e multifuncional para gerenciar servidores, acessos remotos e executar tarefas de administração de rede no Windows. Sua interface amigável e suporte a múltiplos protocolos tornam-no uma excelente escolha para profissionais de TI, que podem gerenciar de forma centralizada e eficiente seus ambientes de rede e servidores.
-```
-
-Esse conteúdo está pronto para ser usado como documentação em um arquivo Markdown.
