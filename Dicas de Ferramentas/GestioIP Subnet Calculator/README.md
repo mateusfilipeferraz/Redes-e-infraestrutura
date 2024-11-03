@@ -1,5 +1,13 @@
-```markdown
+
+Você tem razão, deixei de formatar corretamente. Aqui está o conteúdo em Markdown:
+
+---
+
+# GestioIP Subnet Calculator
+
 O site [GestioIP Subnet Calculator](http://www.gestioip.net/cgi-bin/subnet_calculator.cgi) oferece uma calculadora de sub-redes, uma ferramenta útil para administradores de rede que desejam realizar cálculos de endereçamento IP de maneira rápida e eficiente. A calculadora permite inserir um endereço IP e uma máscara de sub-rede para obter informações detalhadas, como:
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dicas%20de%20Ferramentas/GestioIP%20Subnet%20Calculator/Screenshot_1.png)
 
 - Faixa de endereços IP da sub-rede;
 - Endereço de broadcast;
@@ -9,11 +17,17 @@ O site [GestioIP Subnet Calculator](http://www.gestioip.net/cgi-bin/subnet_calcu
 
 Essa ferramenta é especialmente útil para segmentação de redes e planejamento de endereços IP, facilitando a criação de sub-redes adequadas para o tamanho de uma rede e para a alocação eficiente de endereços IP.
 
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dicas%20de%20Ferramentas/GestioIP%20Subnet%20Calculator/Screenshot_2.png)
+
+
 ## Seção de "Next Subnets" (Próximas Sub-redes)
 
 Na seção de **"Next Subnets"** do GestioIP Subnet Calculator, você pode visualizar quais serão as próximas sub-redes com base no endereço IP e na máscara de sub-rede informados. Essa funcionalidade é útil para o planejamento de sub-redes consecutivas dentro de um bloco de endereços IP maior, especialmente em redes que precisam ser segmentadas em múltiplas sub-redes com tamanhos iguais ou diferentes.
 
 ### Funcionalidades da Seção "Next Subnets"
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dicas%20de%20Ferramentas/GestioIP%20Subnet%20Calculator/Screenshot_3.png)
+
 
 - **Visualização de Próximas Sub-redes**: Ao inserir um endereço IP e uma máscara de sub-rede, o sistema calcula e exibe as próximas sub-redes válidas, ajudando no planejamento da distribuição de endereços dentro de um bloco de rede maior.
 
