@@ -52,7 +52,6 @@ Em alguns casos, o Mikrotik se conecta a um servidor PPPoE (por exemplo, ao usar
 
 O PPPoE é muito útil em provedores e redes corporativas, pois possibilita a autenticação individual, o controle de banda e a segmentação de clientes de forma eficaz.
 
-```markdown
 # Comandos CLI para Configuração PPPoE no Mikrotik
 
 Aqui estão os comandos CLI para configurar tanto o servidor quanto o cliente PPPoE no Mikrotik.
@@ -105,4 +104,3 @@ Essa configuração é para um Mikrotik que vai se conectar a um servidor PPPoE,
 Esses comandos configuram um servidor PPPoE no Mikrotik para gerenciar e autenticar clientes diretamente no roteador, sem um servidor RADIUS, e também permitem configurar um cliente PPPoE para se conectar a um provedor.
 
 Se precisar de ajustes para controle de banda, mais clientes ou um setup específico, posso ajudar a adaptar esses comandos!
-```
