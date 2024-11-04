@@ -51,3 +51,58 @@ Em alguns casos, o Mikrotik se conecta a um servidor PPPoE (por exemplo, ao usar
 - **Autenticação RADIUS**: Em redes maiores, o RADIUS pode ser usado para autenticar os usuários PPPoE em vez do próprio Mikrotik. Isso permite gerenciar contas de usuários centralmente, comum em provedores de internet.
 
 O PPPoE é muito útil em provedores e redes corporativas, pois possibilita a autenticação individual, o controle de banda e a segmentação de clientes de forma eficaz.
+
+```markdown
+# Comandos CLI para Configuração PPPoE no Mikrotik
+
+Aqui estão os comandos CLI para configurar tanto o servidor quanto o cliente PPPoE no Mikrotik.
+
+---
+
+### Configuração do Servidor PPPoE no Mikrotik
+
+Esses comandos configuram um servidor PPPoE no Mikrotik que distribui IPs a partir de um pool e aplica um controle básico de banda para cada cliente.
+
+1. **Crie o Pool de IPs**:
+   ```shell
+   /ip pool add name=Clientes-PPPoE ranges=192.168.10.2-192.168.10.254
+   ```
+
+2. **Configure o Perfil de PPPoE**:
+   ```shell
+   /ppp profile add name=PPPoE-Default local-address=192.168.10.1 remote-address=Clientes-PPPoE rate-limit=2M/4M dns-server=8.8.8.8
+   ```
+
+3. **Adicione a Interface do Servidor PPPoE**:
+   ```shell
+   /interface pppoe-server server add interface=ether1 service-name=PPPoE-Service disabled=no max-mtu=1480 max-mru=1480
+   ```
+
+4. **Adicione Clientes PPPoE**:
+   ```shell
+   /ppp secret add name=cliente1 password=senha123 profile=PPPoE-Default service=pppoe
+   /ppp secret add name=cliente2 password=senha456 profile=PPPoE-Default service=pppoe
+   ```
+
+---
+
+### Configuração do Cliente PPPoE no Mikrotik
+
+Essa configuração é para um Mikrotik que vai se conectar a um servidor PPPoE, como em um cenário onde ele atua como roteador de um cliente conectado ao provedor de internet via PPPoE.
+
+1. **Configure o Cliente PPPoE**:
+   ```shell
+   /interface pppoe-client add name=PPPoE-Client interface=ether1 user=cliente1 password=senha123 disabled=no add-default-route=yes use-peer-dns=yes
+   ```
+
+   - **interface**: Defina a interface que conecta ao provedor.
+   - **user** e **password**: Nome de usuário e senha fornecidos pelo servidor PPPoE.
+   - **add-default-route=yes**: Adiciona automaticamente a rota padrão para o gateway PPPoE.
+   - **use-peer-dns=yes**: Usa o DNS fornecido pelo servidor PPPoE.
+
+---
+
+Esses comandos configuram um servidor PPPoE no Mikrotik para gerenciar e autenticar clientes diretamente no roteador, sem um servidor RADIUS, e também permitem configurar um cliente PPPoE para se conectar a um provedor.
+
+Se precisar de ajustes para controle de banda, mais clientes ou um setup específico, posso ajudar a adaptar esses comandos!
+```
