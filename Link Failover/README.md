@@ -1,3 +1,4 @@
+#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
 
 ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Link%20Failover/Link%20Failover.png)
 
