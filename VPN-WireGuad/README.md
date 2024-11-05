@@ -80,6 +80,72 @@ Para garantir que o tráfego seja direcionado corretamente, adicione rotas que a
 
 ---
 
+Aqui estão os comandos de CLI para o tutorial sobre como criar uma VPN com WireGuard no MikroTik:
+
+## Tutorial de como criar o VPN-WIREGUARD por Cli.
+
+### Passo 1: Criar Interface WireGuard em Cada Roteador
+
+1. Acesse o Mikrotik via WinBox.
+2. Vá para **Interfaces** > **WireGuard** e clique no botão **+** para adicionar uma nova interface WireGuard.
+3. Configure a Interface:
+
+   ```bash
+   /interface wireguard
+   add name=WireGuard-Matriz listen-port=25365 private-key=<chave_privada_gerada>
+   ```
+
+   Para o Mikrotik da Filial:
+
+   ```bash
+   /interface wireguard
+   add name=WireGuard-Filial listen-port=25365 private-key=<chave_privada_gerada>
+   ```
+
+4. Clique em **Apply** e depois em **OK**.
+
+---
+
+### Passo 2: Configurar o Peer (Configuração de Par)
+
+Após criar a interface, configure os peers para permitir a comunicação entre os roteadores.
+
+- **No Mikrotik da Matriz**:
+
+   ```bash
+   /interface wireguard peers
+   add interface=WireGuard-Matriz public-key=<chave_publica_filial> endpoint-address=192.168.122.76 endpoint-port=25365 allowed-address=192.168.10.0/24,10.10.10.2/30 persistent-keepalive=25
+   ```
+
+- **No Mikrotik da Filial**:
+
+   ```bash
+   /interface wireguard peers
+   add interface=WireGuard-Filial public-key=<chave_publica_matriz> endpoint-address=192.168.198.148 endpoint-port=25365 allowed-address=192.168.1.0/24,10.10.10.2/32 persistent-keepalive=25
+   ```
+
+---
+
+### Passo 3: Configurar Rotas
+
+Para garantir que o tráfego seja direcionado corretamente, adicione rotas que apontem para o IP da interface WireGuard em cada Mikrotik.
+
+- **No Mikrotik da Matriz**:
+
+   ```bash
+   /ip route
+   add dst-address=192.168.10.0/24 gateway=10.10.10.2
+   ```
+
+- **No Mikrotik da Filial**:
+
+   ```bash
+   /ip route
+   add dst-address=192.168.1.0/24 gateway=10.10.10.1
+   ```
+
+---
+
 ### Explicação Geral
 
-Essas configurações são para estabelecer um túnel VPN entre duas redes (Matriz e Filial) usando o protocolo WireGuard. A interface WireGuard permite comunicação segura entre esses dois dispositivos Mikrotik, utilizando criptografia e chaves públicas/privadas para autenticação. O **endpoint** e o **endpoint port** indicam para onde o tráfego é direcionado, enquanto o **allowed address** define quais redes podem se comunicar pela VPN. O **keepalive** é usado para manter o túnel ativo mesmo sem tráfego contínuo, e o **handshake** indica que a conexão está estável.
+Essas configurações estabelecem um túnel VPN entre duas redes (Matriz e Filial) usando o protocolo WireGuard. A interface WireGuard permite comunicação segura entre os dois dispositivos Mikrotik, utilizando criptografia e chaves públicas/privadas para autenticação. O **endpoint** e o **endpoint port** indicam para onde o tráfego é direcionado, enquanto o **allowed address** define quais redes podem se comunicar pela VPN. O **keepalive** é usado para manter o túnel ativo mesmo sem tráfego contínuo, e o **handshake** indica que a conexão está estável.
