@@ -87,7 +87,7 @@ Esses comandos devem ser suficientes para configurar o proxy no Mikrotik diretam
 
 Com essas configurações, o Firefox passará a rotear o tráfego HTTP (e possivelmente HTTPS) através do proxy configurado no Mikrotik, permitindo controle centralizado e potencial economia de banda.
 
-###Para configurar o proxy no Windows, siga estes passos:
+### Para configurar o proxy no Windows, siga estes passos:
 
 ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Proxy-Web-no-Mikrotik/proxy%20windows.png)
 
