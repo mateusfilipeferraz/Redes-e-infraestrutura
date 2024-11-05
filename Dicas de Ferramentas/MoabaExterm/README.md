@@ -1,9 +1,13 @@
+#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
 # MobaXterm
 
 O **MobaXterm** é uma ferramenta poderosa e completa para acesso remoto e gerenciamento de servidores e redes, especialmente projetada para usuários que precisam de múltiplos serviços em um único software. Ele combina várias funcionalidades de cliente, como SSH, telnet, VNC, SFTP e RDP, em uma interface gráfica amigável para sistemas Windows. É amplamente utilizado por administradores de sistemas, engenheiros de rede e desenvolvedores, pois facilita a execução de tarefas remotas e o gerenciamento de servidores e equipamentos de rede.
+
 ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dicas%20de%20Ferramentas/MoabaExterm/MobaXterm.png)
 
 Link site oficial-> https://mobaxterm.mobatek.net/
+
 ## Principais Funcionalidades do MobaXterm
 
 1. **Cliente SSH e Suporte para Múltiplos Protocolos**:
