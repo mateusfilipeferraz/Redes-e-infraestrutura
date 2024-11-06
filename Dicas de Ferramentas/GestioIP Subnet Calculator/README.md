@@ -1,5 +1,6 @@
 
 #### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
 # GestioIP Subnet Calculator
 
 O site [GestioIP Subnet Calculator](http://www.gestioip.net/cgi-bin/subnet_calculator.cgi) oferece uma calculadora de sub-redes, uma ferramenta útil para administradores de rede que desejam realizar cálculos de endereçamento IP de maneira rápida e eficiente. A calculadora permite inserir um endereço IP e uma máscara de sub-rede para obter informações detalhadas, como:
