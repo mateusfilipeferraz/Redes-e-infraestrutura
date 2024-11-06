@@ -25,6 +25,8 @@ O proxy web é um servidor intermediário que atua entre o cliente (navegador) e
 3. **Configurar as Regras de Proxy (opcional):**
    - Em `IP > Web Proxy > Access`, você pode adicionar regras para controlar o acesso, como bloquear determinados sites ou permitir apenas alguns endereços.
    - Clique em **Add New** e configure os parâmetros de acordo com a política desejada.
+   
+ ##  Trabalhando Proxy Transparente
 
 4. **Redirecionar o Tráfego para o Proxy (opcional):**
    Para forçar os clientes a usarem o proxy, crie uma regra de redirecionamento no `IP > Firewall > NAT`:
