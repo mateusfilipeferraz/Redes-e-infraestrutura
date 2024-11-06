@@ -31,7 +31,7 @@ O proxy web é um servidor intermediário que atua entre o cliente (navegador) e
    - Clique em **Add New**.
    - Em `Chain`, selecione **dstnat**.
    - Em `Protocol`, escolha **6 (tcp)**.
-   - Em `Dst. Port`, defina **80** (porta HTTP).
+   - Em `Dst. Port`, defina **80,443** (porta HTTP e HHTTPS).
    - Em `Action`, escolha **Redirect** e defina a porta do proxy (ex.: 8080).
 
 
