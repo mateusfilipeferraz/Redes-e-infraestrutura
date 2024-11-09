@@ -1,3 +1,5 @@
+#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
 # Hurricane Electric Toolkit
 
 O *Hurricane Electric Toolkit*, desenvolvido pela Hurricane Electric, é uma coleção de ferramentas projetadas para auxiliar em diagnósticos e análises de rede, com um foco especial em IPv6, mas também com suporte para IPv4. Esse conjunto de ferramentas é amplamente utilizado por profissionais de redes, engenheiros e administradores para verificar conectividade, configurar redes e resolver problemas de desempenho e de configuração de endereços IP.

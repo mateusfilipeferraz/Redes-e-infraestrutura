@@ -1,3 +1,6 @@
+
+#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
 # PPPoE (Point-to-Point Protocol over Ethernet) no Mikrotik
 Link do lab : https://drive.google.com/file/d/1g-qRb0tYUCP1LTtqVwUFI-kSfQZL3g3F/view?usp=sharing
 
