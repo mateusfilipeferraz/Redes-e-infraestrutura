@@ -128,25 +128,28 @@ Passo a passo:
 2. Defina as VLANs desejadas com base no ID de VLAN (número entre 1 e 4094).
 3. Configure as interfaces trunk e access conforme a estrutura da rede.
 
-```plaintext
-# Exemplo básico de configuração de VLAN no Mikrotik:
-# 1. Cria uma VLAN com ID 10 associada à interface ether1
-/interface vlan
-add name=vlan10 vlan-id=10 interface=ether1
+## Exemplo básico de configuração de VLAN no Mikrotik:
+#### 1. Cria uma VLAN com ID 10 associada à interface ether1
 
-# 2. Define a ether2 como uma porta de acesso para a VLAN 10
-/interface bridge port
-add bridge=bridge1 interface=ether2 pvid=10
+```
+/interface vlan add name=vlan10 vlan-id=10 interface=ether1
 
-# 3. Configura ether1 como trunk, permitindo o tráfego de várias VLANs
-/interface bridge vlan
-add bridge=bridge1 tagged=ether1 vlan-ids=10
+```
+#### 2. Define a ether2 como uma porta de acesso para a VLAN 10
+
+```
+/interface bridge port add bridge=bridge1 interface=ether2 pvid=10
+
+```
+#### 3. Configura ether1 como trunk, permitindo o tráfego de várias VLANs
+
+```
+/interface bridge vlanadd bridge=bridge1 tagged=ether1 vlan-ids=10
 ```
 
 Esse exemplo básico configura uma VLAN (com ID 10) e demonstra como definir uma interface trunk e uma interface access em Mikrotik.
 
-Precisa de mais detalhes? Posso ajudar a expandir a configuração!
-```
+
 
 Aqui estão as instruções para configurar uma bridge com VLANs em um dispositivo Mikrotik usando a CLI. Esse exemplo cria uma bridge, define VLANs e configura portas com tagged e untagged VLANs para diferentes cenários de conexão.
 
@@ -166,7 +169,7 @@ Aqui estão as instruções para configurar uma bridge com VLANs em um dispositi
 
 #### 1. Crie a bridge
 
-```bash
+```
 /interface bridge add name=bridge1
 ```
 
@@ -195,7 +198,7 @@ Aqui, vamos configurar VLAN IDs na bridge e associá-las às portas específicas
 
 2. Adicione a VLAN 20 à bridge e marque-a como tagged na `ether2` e untagged na `ether3`.
 
-```bash
+```
 /interface bridge vlan add bridge=bridge1 vlan-ids=20 tagged=bridge1,ether2 untagged=ether3
 ```
 
@@ -203,7 +206,7 @@ Aqui, vamos configurar VLAN IDs na bridge e associá-las às portas específicas
 
 3. Adicione a VLAN 30 à bridge e marque-a como tagged na `ether2` e untagged na `ether4`.
 
-```bash
+```
 /interface bridge vlan add bridge=bridge1 vlan-ids=30 tagged=bridge1,ether2 untagged=ether4
 ```
 
@@ -211,7 +214,7 @@ Aqui, vamos configurar VLAN IDs na bridge e associá-las às portas específicas
 
 Habilite o filtro de VLAN na bridge para garantir que o tráfego seja encaminhado de acordo com as configurações de VLAN:
 
-```bash
+```
 /interface bridge set bridge1 vlan-filtering=yes
 ```
 
@@ -221,13 +224,14 @@ Se precisar de IPs para as VLANs na bridge (por exemplo, para roteamento interno
 
 ##### Exemplo para VLAN 10:
 
+```
 /interface vlan add name=vlan10 interface=bridge1 vlan-id=10
 /ip address add address=10.10.10.1/24 interface=vlan10
 ```
 
 Repita para as VLANs 20 e 30:
 
-```bash
+```
 /interface vlan add name=vlan20 interface=bridge1 vlan-id=20
 /ip address add address=10.20.20.1/24 interface=vlan20
 
