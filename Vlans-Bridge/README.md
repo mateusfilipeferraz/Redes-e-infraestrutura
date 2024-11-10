@@ -1,10 +1,12 @@
+# Bridge em Redes
+
 ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vlans-Bridge/Screenshot_2.png)
 
-Aqui está uma versão mais detalhada sobre bridges, VLANs, e a relação entre elas em redes:
 
----
+Link documentação oficial: https://drive.google.com/file/d/1oP9Q_acf6WMeIQUB5l5iw-C4gabcYv3y/view?usp=sharing
 
-# Bridge em Redes
+Link do Lab: https://help.mikrotik.com/docs/spaces/ROS/pages/28606465/Bridge+VLAN+Table
+
 
 Uma **bridge** é um dispositivo de camada 2 (Enlace de Dados) que conecta diferentes segmentos de rede e encaminha pacotes de dados com base nos endereços MAC (Media Access Control) de origem e destino. Seu papel principal é “filtrar” o tráfego entre segmentos, permitindo que apenas os pacotes necessários sejam encaminhados de um segmento para outro. Isso é útil para:
 
@@ -79,11 +81,164 @@ Vamos considerar um cenário em uma empresa onde o departamento de TI (VLAN 30) 
 
 Uma bridge pode ser configurada para conectar essas duas VLANs, permitindo que dispositivos de TI acessem os servidores específicos de Vendas. Ao mesmo tempo, o restante do tráfego da VLAN 20 permanece isolado, sem permissão para se comunicar com a VLAN 30. Isso garante que apenas os dispositivos autorizados tenham o acesso necessário.
 
----
+
 
 # Resumo
 
 - **Bridge**: Dispositivo de camada 2 que conecta segmentos de rede, filtrando o tráfego com base em endereços MAC.
 - **VLANs e Bridge**: Permite uma segmentação lógica e física da rede, mantendo o tráfego isolado ou integrando segmentos quando necessário.
 - **Tagged e Untagged**: Em ambientes complexos, bridges permitem a comunicação entre VLANs tagged, mas também suportam dispositivos que não reconhecem VLANs com portas untagged.
+---
+
+# VLANs (Virtual Local Area Networks)
+
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vlans-Bridge/700px-Basic_vlan_switching.jpg)
+
+
+VLANs são redes locais virtuais que permitem segmentar uma rede física em várias redes lógicas independentes. Isso melhora a segurança, o desempenho e a organização da infraestrutura, especialmente em redes empresariais e data centers. 
+
+## Conceitos-Chave sobre VLANs
+
+### 1. Segmentação e Isolamento
+Com VLANs, você pode isolar o tráfego entre diferentes grupos, como departamentos (ex.: Financeiro e RH) em uma mesma rede física. Esse isolamento aumenta a segurança, pois cada VLAN age como uma rede independente.
+
+### 2. Controle de Tráfego e Broadcast
+As VLANs limitam o tráfego de broadcast (mensagens enviadas a todos os dispositivos em uma rede), o que reduz o consumo de largura de banda e melhora o desempenho da rede.
+
+### 3. Tipos de VLANs
+- **VLAN de Dados**: Usada para separar o tráfego de dados normal dos usuários.
+- **VLAN de Voz**: Específica para o tráfego de voz (VoIP), permitindo melhor qualidade de serviço (QoS).
+- **VLAN de Gerenciamento**: Usada para acessar e controlar dispositivos de rede, como switches e roteadores.
+- **VLAN Nativa**: Normalmente a VLAN padrão de um switch, usada para dados sem tags, mas pode ser alterada conforme necessário.
+
+### 4. Tagging e Untagging
+- **802.1Q**: O padrão IEEE 802.1Q permite que um switch adicione tags aos quadros Ethernet, identificando a VLAN a que cada quadro pertence. O tagging insere uma informação no cabeçalho dos quadros, determinando a VLAN específica.
+- **Portas Access e Trunk**:
+  - **Portas Access**: Associadas a uma única VLAN, geralmente conectadas a dispositivos finais, como computadores.
+  - **Portas Trunk**: Permitem o tráfego de múltiplas VLANs entre switches e usam o protocolo 802.1Q para tagging.
+
+## Implementação Prática
+
+### Exemplo em Mikrotik
+Em dispositivos Mikrotik, você pode configurar VLANs na interface de rede usando *VLAN tagging* e definir portas de acesso e tronco para controlar o fluxo de tráfego.
+
+Passo a passo:
+1. Crie uma interface de VLAN associada a uma interface física.
+2. Defina as VLANs desejadas com base no ID de VLAN (número entre 1 e 4094).
+3. Configure as interfaces trunk e access conforme a estrutura da rede.
+
+```plaintext
+# Exemplo básico de configuração de VLAN no Mikrotik:
+# 1. Cria uma VLAN com ID 10 associada à interface ether1
+/interface vlan
+add name=vlan10 vlan-id=10 interface=ether1
+
+# 2. Define a ether2 como uma porta de acesso para a VLAN 10
+/interface bridge port
+add bridge=bridge1 interface=ether2 pvid=10
+
+# 3. Configura ether1 como trunk, permitindo o tráfego de várias VLANs
+/interface bridge vlan
+add bridge=bridge1 tagged=ether1 vlan-ids=10
+```
+
+Esse exemplo básico configura uma VLAN (com ID 10) e demonstra como definir uma interface trunk e uma interface access em Mikrotik.
+
+Precisa de mais detalhes? Posso ajudar a expandir a configuração!
+```
+
+Aqui estão as instruções para configurar uma bridge com VLANs em um dispositivo Mikrotik usando a CLI. Esse exemplo cria uma bridge, define VLANs e configura portas com tagged e untagged VLANs para diferentes cenários de conexão.
+
+### Cenário:
+1. Criar uma bridge chamada `bridge1`.
+2. Configurar três VLANs:
+   - **VLAN 10** (Rede de Vendas)
+   - **VLAN 20** (Rede de TI)
+   - **VLAN 30** (Rede Administrativo)
+3. Configurar as interfaces físicas para fazer parte da bridge e aplicar as VLANs:
+   - Porta 1: Untagged na VLAN 10 (acesso direto à rede de Vendas).
+   - Porta 2: Tagged para todas as VLANs (para conectar a um switch que suporta VLANs).
+   - Porta 3: Untagged na VLAN 20 (acesso direto à rede de TI).
+   - Porta 4: Untagged na VLAN 30 (acesso direto à rede Administrativa).
+
+### Passo a Passo de Configuração
+
+#### 1. Crie a bridge
+
+```bash
+/interface bridge add name=bridge1
+```
+
+#### 2. Adicione as portas físicas à bridge
+
+```bash
+/interface bridge port add bridge=bridge1 interface=ether1
+/interface bridge port add bridge=bridge1 interface=ether2
+/interface bridge port add bridge=bridge1 interface=ether3
+/interface bridge port add bridge=bridge1 interface=ether4
+```
+
+#### 3. Configure as VLANs na bridge
+
+Aqui, vamos configurar VLAN IDs na bridge e associá-las às portas específicas (tagged e untagged).
+
+##### VLAN 10 - Porta 1 (untagged) e Porta 2 (tagged)
+
+1. Adicione a VLAN 10 à bridge e marque-a como tagged na `ether2` e untagged na `ether1`.
+
+```bash
+/interface bridge vlan add bridge=bridge1 vlan-ids=10 tagged=bridge1,ether2 untagged=ether1
+```
+
+##### VLAN 20 - Porta 2 (tagged) e Porta 3 (untagged)
+
+2. Adicione a VLAN 20 à bridge e marque-a como tagged na `ether2` e untagged na `ether3`.
+
+```bash
+/interface bridge vlan add bridge=bridge1 vlan-ids=20 tagged=bridge1,ether2 untagged=ether3
+```
+
+##### VLAN 30 - Porta 2 (tagged) e Porta 4 (untagged)
+
+3. Adicione a VLAN 30 à bridge e marque-a como tagged na `ether2` e untagged na `ether4`.
+
+```bash
+/interface bridge vlan add bridge=bridge1 vlan-ids=30 tagged=bridge1,ether2 untagged=ether4
+```
+
+#### 4. Configure a bridge para filtrar VLANs
+
+Habilite o filtro de VLAN na bridge para garantir que o tráfego seja encaminhado de acordo com as configurações de VLAN:
+
+```bash
+/interface bridge set bridge1 vlan-filtering=yes
+```
+
+#### 5. Atribua IPs às VLANs (opcional)
+
+Se precisar de IPs para as VLANs na bridge (por exemplo, para roteamento interno ou administração de VLANs), configure um IP para cada VLAN interface na bridge.
+
+##### Exemplo para VLAN 10:
+
+/interface vlan add name=vlan10 interface=bridge1 vlan-id=10
+/ip address add address=10.10.10.1/24 interface=vlan10
+```
+
+Repita para as VLANs 20 e 30:
+
+```bash
+/interface vlan add name=vlan20 interface=bridge1 vlan-id=20
+/ip address add address=10.20.20.1/24 interface=vlan20
+
+/interface vlan add name=vlan30 interface=bridge1 vlan-id=30
+/ip address add address=10.30.30.1/24 interface=vlan30
+```
+
+---
+
+### Resumo dos Comandos
+
+Esses comandos criam uma bridge (`bridge1`) e configuram VLANs com portas tagged e untagged conforme o cenário descrito. Dispositivos conectados às portas `ether1`, `ether3` e `ether4` acessarão as VLANs de Vendas, TI e Administrativo, respectivamente, enquanto a `ether2` mantém o tráfego de todas as VLANs com tags para conectar a um switch compatível com VLANs.
+
 
