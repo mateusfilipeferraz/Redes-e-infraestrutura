@@ -1,3 +1,5 @@
+#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
 # Bridge em Redes
 
 ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vlans-Bridge/Screenshot_2.png)
