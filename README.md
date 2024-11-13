@@ -1,4 +1,11 @@
 #### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
+<div style="text-align: center;">
+    <img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/ItShow_network_infrastructureinformation_technology_key_fb0338fd-fdf4-4018-9f4d-7202f66dfa62.png" alt="Descrição da imagem" width="1000"/>
+</div>
+
+
+
 # Infraestrutura e Redes
 
 Bem-vindo ao meu repositório de estudos sobre infraestrutura e redes! Sou analista júnior e trabalho com equipamentos da Mikrotik. Neste espaço, vou compartilhar meus laboratórios, scripts e conteúdos relacionados ao universo de redes e infraestrutura. O objetivo deste repositório é documentar meu aprendizado e fornecer materiais práticos que podem ser úteis para outros profissionais e entusiastas da área.
