@@ -1,6 +1,10 @@
+#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+
 # VRRP No Mikrotik
 
 Link do lab :<https://drive.google.com/file/d/1b23DQar7clo1v0TWrgyf99f38U08pdT9/view?usp=sharing>
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VRRP%20e%20Load-balancing/VRRP.png)
 
 VRRP (Virtual Router Redundancy Protocol) é um protocolo que permite a configuração de redundância de roteadores, garantindo que, caso um roteador falhe, outro assuma o papel de roteador principal sem interrupção significativa para os usuários da rede. Em outras palavras, o VRRP cria um "roteador virtual" compartilhado entre dois ou mais dispositivos, aumentando a disponibilidade e a resiliência da rede.
 Como o VRRP Funciona
@@ -30,6 +34,8 @@ Abaixo está o guia para configurar o VRRP e o load balancing com esses dados.
 ---
 
 # Configuração do VRRP no Mikrotik
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VRRP%20e%20Load-balancing/VRRP%20(2).png)
 
 Vamos configurar dois roteadores para que compartilhem o mesmo IP virtual `192.168.1.1` na rede `192.168.1.0/24`, usando a interface `vrrp1` para redundância de gateway. Em caso de falha de um roteador, o outro assumirá automaticamente o papel de **Master**, mantendo a continuidade de serviço.
 
@@ -82,6 +88,8 @@ Para distribuir o tráfego entre os dois roteadores, podemos criar um segundo gr
 
 Link lab :<https://drive.google.com/file/d/1uV116anom6btD2dKXYU5NyLhuMUMYfY9/view?usp=sharing>
 
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VRRP%20e%20Load-balancing/VRRP-Load%20balancing%20(4).png)
+
  **VRRP com Load Balancing** no Mikrotik são os seguintes:
 
 - **Rede LAN**: `10.10.10.0/24`
@@ -93,6 +101,8 @@ Link lab :<https://drive.google.com/file/d/1uV116anom6btD2dKXYU5NyLhuMUMYfY9/vie
   - Interface VRRP para o segundo grupo: `VRRP-load-bal`
 
 Esse setup indica dois grupos VRRP, `vrrp1` e `VRRP-load-bal`, cada um com um IP virtual distinto (`192.168.1.1` e `192.168.1.2`). Com esses dados, o balanceamento de carga distribuirá o tráfego entre dois gateways virtuais na rede `192.168.1.0/24`, mantendo a redundância de gateway.
+
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VRRP%20e%20Load-balancing/VRRP-Load%20balancing.png)
 
 ### Configuração para VRRP com Load Balancing no Mikrotik
 
