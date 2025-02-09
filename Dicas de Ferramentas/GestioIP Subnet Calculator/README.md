@@ -78,4 +78,3 @@ Suponha que você tenha uma rede inicial **172.16.0.0/20** (4096 endereços IP) 
    Esse tipo de visualização ajuda a reservar sub-redes adicionais para expansão futura sem risco de conflito de endereços.
 
 Esses exemplos demonstram como o uso da seção "Next Subnets" pode simplificar o planejamento e a organização de uma rede IP, especialmente em cenários de segmentação, alocação de recursos e escalabilidade da infraestrutura de rede.
-```
