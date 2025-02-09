@@ -71,5 +71,3 @@ Link site com mais conteúdo:https://blog.ferenz.com.br/utilizando-o-winmtr-no-w
 
 O WinMTR é uma ferramenta poderosa e fácil de usar para diagnosticar problemas de rede. Seu recurso de combinar traceroute e ping fornece uma visão abrangente sobre o desempenho da rede, ajudando na identificação e resolução de problemas de conectividade.
 ```
-
-Sinta-se à vontade para copiar e colar o conteúdo em um arquivo `.md`! Se precisar de mais alterações ou informações, é só avisar.
