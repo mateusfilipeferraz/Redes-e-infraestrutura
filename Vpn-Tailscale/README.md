@@ -1,6 +1,5 @@
-Aqui está o seu texto formatado em **Markdown**:
 
-```markdown
+
 # VPN com Tailscale e Isolando RDP
 
 O **Tailscale** é uma ferramenta de rede privada virtual (VPN) baseada no protocolo **WireGuard**, que facilita a criação de redes privadas seguras entre dispositivos, sem a necessidade de configuração complexa de firewalls ou roteadores. Ele é amplamente utilizado para conectar servidores, dispositivos pessoais e ambientes corporativos de forma segura e eficiente.
@@ -49,4 +48,3 @@ Para isolar o acesso RDP apenas pela VPN:
 - Com isso, a VPS **não responderá mais ao IP público** para conexões RDP e aceitará somente via VPN.  
 ```
 
-Se quiser, posso converter esse conteúdo em PDF ou HTML também. Deseja isso?
