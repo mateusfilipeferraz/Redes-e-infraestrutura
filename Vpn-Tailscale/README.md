@@ -1,38 +1,52 @@
-#### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
+Aqui está o seu texto formatado em **Markdown**:
 
-<div style="text-align: center;">
-    <img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/ItShow_network_infrastructureinformation_technology_key_fb0338fd-fdf4-4018-9f4d-7202f66dfa62.png" alt="Descrição da imagem" width="1000"/>
-</div>
+```markdown
+# VPN com Tailscale e Isolando RDP
 
+O **Tailscale** é uma ferramenta de rede privada virtual (VPN) baseada no protocolo **WireGuard**, que facilita a criação de redes privadas seguras entre dispositivos, sem a necessidade de configuração complexa de firewalls ou roteadores. Ele é amplamente utilizado para conectar servidores, dispositivos pessoais e ambientes corporativos de forma segura e eficiente.
 
+## Principais Características do Tailscale
 
-# Infraestrutura e Redes
+- **Baseado em WireGuard** – Usa o protocolo WireGuard, conhecido por sua velocidade e segurança.  
+- **Fácil Configuração** – Não requer configurações complicadas de firewall ou port forwarding.  
+- **Zero Trust e Controle de Acesso** – Possui autenticação baseada em identidade (Google, Microsoft, GitHub, Okta, etc.).  
+- **Multi-Plataforma** – Funciona no Windows, macOS, Linux, iOS, Android, Synology, Raspberry Pi, entre outros.  
+- **Auto Mesh Networking** – Conecta automaticamente dispositivos da mesma rede sem precisar passar por servidores centrais.  
+- **Administração Simples** – Interface web para monitoramento e controle de dispositivos.  
+- **Integração com Kubernetes e Docker** – Ideal para DevOps e cloud computing.  
 
-Bem-vindo ao meu repositório de estudos sobre infraestrutura e redes! Sou analista júnior e trabalho com equipamentos da Mikrotik. Neste espaço, vou compartilhar meus laboratórios, scripts e conteúdos relacionados ao universo de redes e infraestrutura. O objetivo deste repositório é documentar meu aprendizado e fornecer materiais práticos que podem ser úteis para outros profissionais e entusiastas da área.
+## Casos de Uso do Tailscale
 
-## O que você vai encontrar aqui:
+- **Acesso Remoto Seguro** – Conecte-se a servidores privados de qualquer lugar, sem abrir portas na internet.  
+- **Substituição de VPNs Tradicionais** – Alternativa mais leve e rápida às VPNs corporativas.  
+- **Ambientes de Desenvolvimento e DevOps** – Conecte ambientes locais e em nuvem.  
+- **Jogos Online Privados** – Crie redes privadas para jogar com amigos.  
+- **Trabalho Remoto** – Conecte funcionários de forma segura sem VPNs tradicionais complexas.  
 
-- **Laboratórios**: Ambientes simulados de redes com roteadores, switches, Mikrotik e outras tecnologias.
- (nossos laboratórios rodam no gns3, vou tentar usar sempre o host padrão para não haver imcompatibilidades)
-Link GNS3 => https://gns3.com/
-- **Zabbix**: Configurações e scripts relacionados ao monitoramento de rede usando Zabbix.
-- **Segurança de Redes**: IDS/IPS e outras ferramentas de proteção de rede.
-- **Automação e Scripts**: Scripts para automação de tarefas em redes e infraestrutura.
-- **Outros Estudos**: Análises e configurações de diversas ferramentas e equipamentos usados em redes corporativas.
+## Diferença do Tailscale para VPNs Tradicionais
 
-## Como contribuir:
+- VPNs tradicionais criam um túnel centralizado para todo o tráfego.  
+- O Tailscale funciona como uma **VPN mesh peer-to-peer**, conectando dispositivos diretamente sempre que possível.  
+- **Não exige servidores dedicados** – Gerencia conexões diretamente entre dispositivos.  
 
-Se você deseja contribuir com este repositório, siga estas diretrizes simples:
+## Tailscale é gratuito?
 
-1. **Fork o repositório**: Crie uma cópia do repositório na sua conta.
-2. **Crie uma branch**: Crie uma branch específica para a sua contribuição (`git checkout -b minha-contribuicao`).
-3. **Faça suas alterações**: Faça modificações no código, crie novos scripts ou melhore o conteúdo existente.
-4. **Crie um Pull Request (PR)**: Quando estiver pronto, submeta um PR para que possamos revisar suas mudanças.
+- Plano gratuito para até **3 usuários** e **100 dispositivos**.  
+- Planos pagos com mais recursos e controle para empresas.  
 
-## Regras para contribuidores:
+## Como configurar?
 
-- **Boas práticas**: Siga as boas práticas de codificação e automação. Certifique-se de que o código está bem documentado.
-- **Commits claros**: Use mensagens de commit descritivas e sucintas para facilitar o entendimento das alterações.
-- **Revisão de código**: Todos os PRs passarão por revisão. Comentários construtivos são bem-vindos!
-- **Licença**: Este projeto segue a licença [Especificar Licença] (por favor, revise-a antes de contribuir).
-- **Respeito e ética**:
+1. Faça um **cadastro na plataforma do Tailscale** para baixar o instalador.  
+2. Repita o procedimento em cada computador que deseja adicionar à rede Tailscale.  
+3. O servidor já poderá ser **pingado**, pois todos estarão na mesma rede VPN.  
+4. Também será possível acessar o **RDP através da VPN**.  
+
+## Isolando o RDP
+
+Para isolar o acesso RDP apenas pela VPN:
+
+- Configure o firewall da VPS permitindo conexões apenas do **IP da VPN** do computador autorizado.  
+- Com isso, a VPS **não responderá mais ao IP público** para conexões RDP e aceitará somente via VPN.  
+```
+
+Se quiser, posso converter esse conteúdo em PDF ou HTML também. Deseja isso?
