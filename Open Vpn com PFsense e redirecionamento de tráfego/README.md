@@ -6,25 +6,30 @@ Neste guia, apresentaremos um passo a passo para configurar o roteamento de trá
 
 ## 📥 Instalando o pfSense na VPS
 
-
-
+<img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/1.gif"  width="600" />
 
 ### Primeiro Login
 Após a instalação, acesse o pfSense utilizando as credenciais padrão:
 
 Usuário: admin
+<br>
 Senha: pfsense
 
 
 > ⚠️ **Importante:** Troque as credenciais imediatamente após o primeiro login.
 
+<img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/2.png"  width="600" />
+
 ### Alterar Senha
+
+<img src="https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/3.webp"  width="600" />
 
 1. Clique em **"Alterar a senha"** no **Gerenciador de Usuários**.
 2. Digite a nova senha.
 3. Confirme a nova senha.
 4. Clique em **Salvar**.
 
+<img src="https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/4.webp"  width="600" />
 ---
 
 ## 🔒 Criando Regras no Firewall
@@ -35,8 +40,12 @@ Para evitar perder o acesso ao fazer alterações nas interfaces, crie uma regra
 2. Clique em **Regras**.
 3. Clique em **Adicionar**.
 4. Em **Interface**, selecione **WAN address**.
-5. Em **Serviço**, selecione **HTTP (porta 80)**.
-6. Clique em **Salvar**.
+<img src=" https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/10.webp"  width="600" />
+
+6. Em **Serviço**, selecione **HTTP (porta 80)**.
+<img src=" https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/11.webp"  width="600" />
+
+8. Clique em **Salvar**.
 
 ---
 
@@ -47,7 +56,9 @@ Se preferir, você pode alterar o idioma para **Português (Brasil)**:
 1. Clique em **System**.
 2. Clique em **Configuração Geral**.
 3. Em **Idioma**, selecione **Português (Brasil)**.
-4. Clique em **Salvar**.
+
+   
+5. Clique em **Salvar**.
 
 ---
 
