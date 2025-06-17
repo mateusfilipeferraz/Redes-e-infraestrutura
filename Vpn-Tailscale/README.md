@@ -1,4 +1,4 @@
-
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vpn-Tailscale/og-image.png)
 
 # VPN com Tailscale e Isolando RDP
 
@@ -35,16 +35,25 @@ O **Tailscale** é uma ferramenta de rede privada virtual (VPN) baseada no proto
 
 ## Como configurar?
 
-1. Faça um **cadastro na plataforma do Tailscale** para baixar o instalador.  
-2. Repita o procedimento em cada computador que deseja adicionar à rede Tailscale.  
-3. O servidor já poderá ser **pingado**, pois todos estarão na mesma rede VPN.  
-4. Também será possível acessar o **RDP através da VPN**.  
+1. Faça um **cadastro na plataforma do Tailscale** para baixar o instalador.
 
+   ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vpn-Tailscale/parte-1.gif)  
+3. Repita o procedimento em cada computador que deseja adicionar à rede Tailscale.
+   ![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vpn-Tailscale/parte1-1.gif)  
+
+   ![Minha imagem](https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Vpn-Tailscale/image-1-1024x416.webp)  
+5. O servidor já poderá ser **pingado**, pois todos estarão na mesma rede VPN.
+
+   ![Minha imagem](https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Vpn-Tailscale/image-2.webp)  
+7. Também será possível acessar o **RDP através da VPN**.  
+
+![Minha imagem](https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Vpn-Tailscale/image-3.webp) 
 ## Isolando o RDP
 
 Para isolar o acesso RDP apenas pela VPN:
 
 - Configure o firewall da VPS permitindo conexões apenas do **IP da VPN** do computador autorizado.  
-- Com isso, a VPS **não responderá mais ao IP público** para conexões RDP e aceitará somente via VPN.  
+- Com isso, a VPS **não responderá mais ao IP público** para conexões RDP e aceitará somente via VPN.
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vpn-Tailscale/dfs.gif) 
 ```
 
