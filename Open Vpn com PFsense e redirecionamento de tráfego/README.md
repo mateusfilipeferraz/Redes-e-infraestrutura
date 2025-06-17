@@ -17,11 +17,9 @@ Senha: pfsense
 
 
 > ⚠️ **Importante:** Troque as credenciais imediatamente após o primeiro login.
-
 <img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/2.png"  width="600" />
 
 ### Alterar Senha
-
 <img src="https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/3.webp"  width="600" />
 
 1. Clique em **"Alterar a senha"** no **Gerenciador de Usuários**.
