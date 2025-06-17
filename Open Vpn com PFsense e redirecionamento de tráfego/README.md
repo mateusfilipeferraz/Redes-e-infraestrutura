@@ -29,7 +29,7 @@ Senha: pfsense
 3. Confirme a nova senha.
 4. Clique em **Salvar**.
 
-<img src="https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/4.webp"  width="600" />
+<img src="https://raw.githubusercontent.com/mateusfilipeferraz/Redes-e-infraestrutura/refs/heads/main/Open%20Vpn%20com%20PFsense%20e%20redirecionamento%20de%20tr%C3%A1fego/21.webp"  width="600" />
 ---
 
 ## 🔒 Criando Regras no Firewall
