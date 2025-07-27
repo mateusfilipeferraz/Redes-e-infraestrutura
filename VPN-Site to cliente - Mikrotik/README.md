@@ -1,8 +1,5 @@
-Aqui está um exemplo de README em Markdown baseado no conteúdo do seu PDF **"Vpn OpenVpn site to client"**:
 
----
 
-````markdown
 # VPN OpenVPN - Site to Client (Mikrotik)
 
 Guia de configuração para estabelecer uma conexão VPN do tipo "site to client" utilizando OpenVPN em um roteador Mikrotik.
