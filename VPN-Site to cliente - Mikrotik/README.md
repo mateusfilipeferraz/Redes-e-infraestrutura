@@ -1,6 +1,7 @@
-
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VPN-Site%20to%20cliente%20-%20Mikrotik/Screenshot_1.png)
 
 # VPN OpenVPN - Site to Client (Mikrotik)
+Download do pdf completo com ilustração. https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VPN-Site%20to%20cliente%20-%20Mikrotik/Vpn%20OpenVpn%20site%20to%20client.pdf
 
 Guia de configuração para estabelecer uma conexão VPN do tipo "site to client" utilizando OpenVPN em um roteador Mikrotik.
 
