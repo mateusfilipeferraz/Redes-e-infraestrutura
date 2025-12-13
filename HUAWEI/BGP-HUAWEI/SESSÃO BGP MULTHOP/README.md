@@ -93,10 +93,3 @@ display bgp peer
   * Rotas para Loopback
 
 ---
-
-## 📌 Boas Práticas
-
-* Sempre usar **Loopback** em sessões EBGP multihop
-* Manter **IGP estável** entre os roteadores
-* Usar **TTL mínimo necessário** (ex.: 2–5 hops)
-* Aplicar **route-policy** e filtros (nunca full open)
