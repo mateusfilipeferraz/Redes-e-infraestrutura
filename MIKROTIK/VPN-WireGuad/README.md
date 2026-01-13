@@ -54,7 +54,7 @@ Para garantir que o tráfego seja direcionado corretamente, adicione rotas que a
 
 ### Primeira Imagem (WireGuard-Matriz)
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VPN-WireGuad/R1.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/VPN-WireGuad/R1.png)
 
 
 - **Interface**: Nome da interface WireGuard usada para a conexão, neste caso, chamada de `WireGuard-Matriz`.
@@ -69,7 +69,7 @@ Para garantir que o tráfego seja direcionado corretamente, adicione rotas que a
 ---
 
 ### Segunda Imagem (WireGuard-Filial)
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/VPN-WireGuad/R2.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/VPN-WireGuad/R2.png)
 
 
 - **Interface**: Nome da interface WireGuard usada na filial, chamada de `WireGuard-Filial`.
