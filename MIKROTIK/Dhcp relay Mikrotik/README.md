@@ -4,7 +4,7 @@
 
 ## 🗺️ Topologia
 
-<img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Dhcp%20relay%20Mikrotik/1.png"  width="600" />
+<img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/Dhcp%20relay%20Mikrotik/1.png"  width="600" />
 
 ### Primeiro passo:
 
