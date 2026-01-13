@@ -1,4 +1,4 @@
-Claro 🙂 Segue o texto transformado para **linguagem Markdown**, com melhor organização e legibilidade:
+<img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/HUAWEI/DOCUMENTA%C3%87%C3%83O%20HUAWEI/QINQ.802.1AD/image-20260108-235206.png"  width="600" />
 
 ````markdown
 # Encapsulamento QinQ 802.1ad
