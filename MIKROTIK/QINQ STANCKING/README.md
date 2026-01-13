@@ -1,5 +1,4 @@
-Perfeito 👍 Segue o conteúdo **transformado e organizado em Markdown**, mantendo os comandos intactos e melhorando a legibilidade para documentação técnica.
-
+<img src="https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/HUAWEI/DOCUMENTA%C3%87%C3%83O%20HUAWEI/QINQ.802.1AD/image-20260108-235206.png"  width="600" />
 ````markdown
 # Topologia QinQ – Mikrotik (CEO / SWPE / CE)
 
