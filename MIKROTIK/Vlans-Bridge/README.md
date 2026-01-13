@@ -2,7 +2,7 @@
 
 # Bridge em Redes
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vlans-Bridge/Screenshot_2.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/Vlans-Bridge/Screenshot_2.png)
 
 
 Link documentação oficial: https://drive.google.com/file/d/1oP9Q_acf6WMeIQUB5l5iw-C4gabcYv3y/view?usp=sharing
@@ -95,7 +95,7 @@ Uma bridge pode ser configurada para conectar essas duas VLANs, permitindo que d
 # VLANs (Virtual Local Area Networks)
 
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Vlans-Bridge/700px-Basic_vlan_switching.jpg)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/Vlans-Bridge/700px-Basic_vlan_switching.jpg)
 
 
 VLANs são redes locais virtuais que permitem segmentar uma rede física em várias redes lógicas independentes. Isso melhora a segurança, o desempenho e a organização da infraestrutura, especialmente em redes empresariais e data centers. 

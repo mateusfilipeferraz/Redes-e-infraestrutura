@@ -1,6 +1,6 @@
 #### Estes conteúdos foram elaborados com a ajuda do ChatGPT.
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Link%20Failover/Link%20Failover.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/Link%20Failover/Link%20Failover.png)
 
 
 Link download do laboratório => https://drive.google.com/file/d/1WhJADt6hi-fWLADTSapx_rlecIPcKz7P/view?usp=drive_link

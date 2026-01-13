@@ -4,7 +4,7 @@ Link donwload: https://drive.google.com/drive/folders/1FKFG6CB6M4C-GjXCxYtHlkTcR
 
 # Configurando o Proxy no Mikrotik
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Proxy-Web-no-Mikrotik/Lab.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/Proxy-Web-no-Mikrotik/Lab.png)
 
 
 
@@ -91,7 +91,7 @@ Com essas configurações, o Firefox passará a rotear o tráfego HTTP (e possiv
 
 ### Para configurar o proxy no Windows, siga estes passos:
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/Proxy-Web-no-Mikrotik/proxy%20windows.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/Proxy-Web-no-Mikrotik/proxy%20windows.png)
 
 
 1. **Abrir as Configurações de Proxy**:

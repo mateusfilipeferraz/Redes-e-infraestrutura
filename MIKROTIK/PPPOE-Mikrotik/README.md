@@ -4,7 +4,7 @@
 # PPPoE (Point-to-Point Protocol over Ethernet) no Mikrotik
 Link do lab : https://drive.google.com/file/d/1g-qRb0tYUCP1LTtqVwUFI-kSfQZL3g3F/view?usp=sharing
 
-![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/PPPOE-Mikrotik/PPPoe.png)
+![Minha imagem](https://github.com/mateusfilipeferraz/Redes-e-infraestrutura/blob/main/MIKROTIK/PPPOE-Mikrotik/PPPoe.png)
 
 O PPPoE (Point-to-Point Protocol over Ethernet) é um protocolo amplamente usado em redes de provedores de internet para gerenciar autenticação e alocação de endereços IP para clientes conectados a uma rede Ethernet. No Mikrotik, o PPPoE é frequentemente utilizado para implementar redes de acesso a clientes, fornecendo controle de banda, autenticação e gerenciamento de sessão para usuários de forma centralizada.
 
