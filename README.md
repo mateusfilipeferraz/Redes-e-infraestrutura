@@ -8,7 +8,7 @@
 
 # Infraestrutura e Redes
 
-Bem-vindo ao meu repositório de estudos sobre infraestrutura e redes! Sou analista júnior e trabalho com equipamentos da Mikrotik. Neste espaço, vou compartilhar meus laboratórios, scripts e conteúdos relacionados ao universo de redes e infraestrutura. O objetivo deste repositório é documentar meu aprendizado e fornecer materiais práticos que podem ser úteis para outros profissionais e entusiastas da área.
+Bem-vindo ao meu repositório de estudos sobre infraestrutura e redes! Sou analista júnior e trabalho com equipamentos da Mikrotik,Huawei, Datacon. Neste espaço, vou compartilhar meus laboratórios, scripts e conteúdos relacionados ao universo de redes e infraestrutura. O objetivo deste repositório é documentar meu aprendizado e fornecer materiais práticos que podem ser úteis para outros profissionais e entusiastas da área.
 
 ## O que você vai encontrar aqui:
 
